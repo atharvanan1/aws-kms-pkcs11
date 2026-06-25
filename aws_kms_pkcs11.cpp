@@ -1145,3 +1145,16 @@ CK_RV C_GetFunctionList(CK_FUNCTION_LIST_PTR_PTR ppFunctionList) {
     *ppFunctionList = &function_list;
     return CKR_OK;
 }
+
+CK_RV C_GetInterfaceList(CK_INTERFACE_PTR pInterfacesList, CK_ULONG_PTR pulCount) {
+    return CKR_OK;
+}
+
+CK_RV C_GetInterface(CK_UTF8CHAR_PTR pInterfaceName, CK_VERSION_PTR pVersion, CK_INTERFACE_PTR_PTR  ppInterface, CK_FLAGS flags) {
+    if (ppInterface == NULL_PTR) {
+        return CKR_ARGUMENTS_BAD;
+    }
+
+    *ppInterface = NULL;
+    return CKR_OK;
+}
